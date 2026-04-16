@@ -1,0 +1,182 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header & Download Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.category {
+    background: #e2e8f0;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #475569;
+    letter-spacing: 1px;
+}
+
+.title-section h1 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: #0f172a;
+}
+
+.title-section p {
+    color: #64748b;
+}
+
+/* Tombol Download Premium */
+.btn-main-download {
+    display: flex;
+    align-items: center;
+    background: #0f172a; /* Warna Biru Dongker Elegan */
+    color: white;
+    text-decoration: none;
+    padding: 18px 28px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+}
+
+.btn-main-download:hover {
+    transform: translateY(-3px);
+    background: #1e293b;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.3);
+}
+
+.btn-main-download i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.text-btn span {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.text-btn small {
+    opacity: 0.7;
+}
+
+/* Gallery Styling */
+.section-title {
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.line {
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.image-card {
+    position: relative;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .btn-main-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
